@@ -244,3 +244,8 @@ fade-in {
   }
 }
 
+#cases .card i {
+  color: var(--primary);
+}
+
+
