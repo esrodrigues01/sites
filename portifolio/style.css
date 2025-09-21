@@ -1,22 +1,4 @@
 /* Variáveis de Tema */
-:root {
-  --bg: #ffffff;
-  --text: #333333;
-  --primary: #14213d;
-  --secondary: #fca311;
-  --light: #f7f7f7;
-  --card: #ffffff;
-}
-
-body.dark {
-  --bg: #121212;
-  --text: #e5e5e5;
-  --primary: #1f1f1f;
-  --secondary: #fca311;
-  --light: #1e1e1e;
-  --card: #2a2a2a;
-}
-
 /* Reset */
 * {
   margin: 0;
@@ -24,13 +6,8 @@ body.dark {
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  background: var(--bg);
-  transition: background 0.3s, color 0.3s;
-}
+
+
 
 /* Header */
 .header {
@@ -195,4 +172,138 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem;
+}
+
+:root {
+  --bg: #f4f4f9;
+  --text: #333;
+  --primary: #0077b6;
+  --secondary: #0096c7;
+  --card-bg: #fff;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #f1f1f1;
+  --primary: #90e0ef;
+  --secondary: #48cae4;
+  --card-bg: #2a2a2a;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: #fff;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#toggle-dark {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.social-links a {
+  color: var(--primary);
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: var(--secondary);
+}
+
+.btn-esr {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-esr:hover {
+  background: var(--secondary);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: #fff;
+  margin-top: 2rem;
 }
