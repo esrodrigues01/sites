@@ -133,6 +133,14 @@
       console.warn("Erro ao iniciar a música:", error);
     });
 }
+document.addEventListener("click", () => {
+  const musica = document.getElementById("musica");
+  if (musica.paused) {
+    musica.play().catch(err => {
+      console.warn("Não foi possível iniciar a música:", err);
+    });
+  }
+}, { once: true });
 
 
 document.getElementById("inicio-musica").style.opacity = "0";
