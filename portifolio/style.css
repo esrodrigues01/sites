@@ -248,4 +248,12 @@ fade-in {
   color: var(--primary);
 }
 
+.section-light {
+  background: var(--bg);
+}
+
+.section-dark {
+  background: var(--card-bg);
+}
+
 
