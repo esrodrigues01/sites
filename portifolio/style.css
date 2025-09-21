@@ -234,4 +234,13 @@ fade-in {
   transform: translateY(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
+#habilidades .card i {
+  color: var(--secondary);
+}
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
 
