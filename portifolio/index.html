@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Emerson Rodrigues</title>
+  <title>Portfólio | Emerson Rodrigues</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="logo"> 
-      <img src="logo-exemplo.png" alt="Logo ESR" class="logo-img">
+    <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo ESR" class="logo-img">
       <h1>Emerson Rodrigues</h1>
     </div>
     <nav>
       <ul>
         <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#cases">Cases</a></li>
         <li><a href="#contato">Contato</a></li>
         <li><a href="https://esrsolucoes.com.br" target="_blank">ESR Soluções</a></li>
       </ul>
@@ -25,50 +29,92 @@
     <button id="toggle-dark">🌙</button>
   </header>
 
-  <main>
-    <section id="sobre">
-      <h2>Sobre Mim</h2>
-      <p>Sou Analista de Infraestrutura de TI, empreendedor na <strong>ESR Soluções</strong>, com experiência em projetos, consultorias, administração de sistemas, análise de dados, desenvolvimento de sites personalizados e bancos de dados. Minha missão é transformar tecnologia em resultados reais para empresas e pessoas.</p>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Emerson Rodrigues</h1>
+    <p>Analista de Infraestrutura | SysAdmin | Consultor ESR Soluções</p>
+    <a href="#contato" class="btn">Agende uma consultoria gratuita</a>
+  </section>
 
-    <section id="servicos">
-      <h2>Serviços</h2>
-      <div class="cards">
-        <div class="card">
-          <i class="fas fa-server"></i>
-          <h3>Infraestrutura & SysAdmin</h3>
-          <p>Gerenciamento de servidores, redes, segurança, backups e monitoramento de ambientes críticos.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-database"></i>
-          <h3>Banco de Dados</h3>
-          <p>Administração, otimização e integração de bancos de dados SQL e NoSQL.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Análise de Dados</h3>
-          <p>Coleta, tratamento e visualização de dados para apoiar decisões estratégicas.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-code"></i>
-          <h3>Sites Personalizados</h3>
-          <p>Desenvolvimento de sites modernos, responsivos e adaptados às necessidades do cliente.</p>
-        </div>
-      </div>
-    </section>
+  <!-- Sobre -->
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou Analista de Infraestrutura de TI com experiência em ambientes Windows e Linux, virtualização, redes, segurança e automação. Empreendedor na ESR Soluções, presto consultoria em infraestrutura, sysadmin e tecnologia para empresas que desejam crescer com segurança e eficiência.</p>
+  </section>
 
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Vamos conversar! Entre em contato pelos canais abaixo:</p>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/seuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/seuusuario" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:seuemail@email.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://wa.me/5599999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <!-- Habilidades -->
+  <section id="habilidades">
+    <h2>Habilidades Técnicas</h2>
+    <ul class="skills">
+      <li>Windows/Linux Server</li>
+      <li>VMware / Hyper-V</li>
+      <li>Redes (Fortinet, Unifi)</li>
+      <li>Backup & Monitoramento</li>
+      <li>Banco de Dados (SQL/PostgreSQL)</li>
+      <li>Programação & Automação (Shell, Python, ADVPL)</li>
+      <li>Segurança da Informação</li>
+    </ul>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-network-wired"></i>
+        <h3>Infraestrutura & Redes</h3>
+        <p>Projetos de rede, servidores e segurança perimetral.</p>
       </div>
-      <a href="https://esrsolucoes.com.br" target="_blank" class="btn-esr">Visitar ESR Soluções</a>
-    </section>
-  </main>
+      <div class="card">
+        <i class="fas fa-database"></i>
+        <h3>Bancos de Dados</h3>
+        <p>Modelagem, otimização e administração SQL/PostgreSQL.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-code"></i>
+        <h3>Sites Personalizados</h3>
+        <p>Criação de sites modernos, responsivos e sob medida.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Análise de Dados</h3>
+        <p>Transformação de dados em insights para decisão estratégica.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-user-shield"></i>
+        <h3>SysAdmin & Segurança</h3>
+        <p>Gestão de servidores, usuários e proteção da informação.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases -->
+  <section id="cases">
+    <h2>Cases de Sucesso</h2>
+    <div class="cases">
+      <div class="case">
+        <h3>Projeto de Virtualização</h3>
+        <p>Migração de servidores físicos para VMware, reduzindo custos em 40%.</p>
+      </div>
+      <div class="case">
+        <h3>Segurança de Rede</h3>
+        <p>Implantação de firewall Fortinet e política de acesso seguro.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Vamos conversar! Entre em contato pelos canais abaixo:</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/seuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/seuusuario" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:seuemail@email.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/5599999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <a href="https://esrsolucoes.com.br" target="_blank" class="btn-esr">Visitar ESR Soluções</a>
+  </section>
 
   <footer>
     <p>© 2025 Emerson Rodrigues - Todos os direitos reservados.</p>
