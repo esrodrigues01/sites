@@ -255,5 +255,9 @@ fade-in {
 .section-dark {
   background: var(--card-bg);
 }
+section h2 i {
+  margin-right: 10px;
+  color: var(--primary);
+}
 
 
