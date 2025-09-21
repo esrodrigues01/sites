@@ -39,14 +39,24 @@ section {
 
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1rem;
+  padding: 1rem;
 }
-
 .galeria img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
+  object-fit: cover;
+  display: block;
 }
+
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
 
 .cartoes {
   display: flex;
