@@ -5,124 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio | Emerson Rodrigues</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a2e0e6ad12.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
+  <!-- Header -->
+  <header class="header">
     <nav class="navbar">
-      <h1 class="logo">Emerson Rodrigues</h1>
-      <ul class="menu">
+      <img src="img/logo.png" alt="Logo ESR" class="logo">
+      <ul class="nav-links">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#certificacoes">Certificações</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
         <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#cases">Cases</a></li>
         <li><a href="#contato">Contato</a></li>
+        <li><a href="https://esrsolucoes.com" target="_blank">ESR Soluções</a></li>
       </ul>
     </nav>
-    <div class="hero">
-      <h2>Analista de Infraestrutura de TI</h2>
-      <p>Empreendedor na ESR Soluções | Infraestrutura, Segurança e SysAdmin</p>
-      <a href="#contato" class="btn">Entrar em Contato</a>
-    </div>
   </header>
 
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Emerson Rodrigues</h1>
+      <p>Analista de Infraestrutura | SysAdmin | Consultor ESR Soluções</p>
+      <a href="#contato" class="btn">Agende uma consultoria gratuita</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
   <section id="sobre" class="section">
-    <h2>Sobre mim</h2>
+    <h2>Sobre Mim</h2>
     <p>
-      Sou Analista de Infraestrutura de TI com experiência em servidores, redes, 
-      segurança da informação e administração de sistemas. Empreendedor na 
-      <strong>ESR Soluções (MEI)</strong>, atuo em projetos e consultorias em 
-      infraestrutura, sysadmin e soluções para pequenas e médias empresas.
+      Sou Analista de Infraestrutura de TI com experiência em ambientes Windows e Linux,
+      virtualização, redes, segurança e automação. Empreendedor na ESR Soluções,
+      presto consultoria em infraestrutura, sysadmin e tecnologia para empresas
+      que desejam crescer com segurança e eficiência.
     </p>
   </section>
 
-  <section id="habilidades" class="section">
+  <!-- Habilidades -->
+  <section id="habilidades" class="section bg-light">
     <h2>Habilidades Técnicas</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Sistemas & Virtualização</h3>
-        <ul>
-          <li>Windows Server & Linux</li>
-          <li>VMware & Hyper-V</li>
-          <li>Active Directory</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Redes & Segurança</h3>
-        <ul>
-          <li>Fortinet Firewall</li>
-          <li>Unifi (Switches & APs)</li>
-          <li>LGPD, Backup & Monitoramento</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Ferramentas & Automação</h3>
-        <ul>
-          <li>Microsoft 365 & Office 365</li>
-          <li>Monitoramento de Ativos</li>
-          <li>Automação de rotinas</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="certificacoes" class="section">
-    <h2>Certificações & Cursos</h2>
-    <ul>
-      <li>Cybersecurity for Everyone – University of Maryland</li>
-      <li>Introduction to Cybersecurity for Business – Univ. of Colorado</li>
-      <li>Microsoft Security, Compliance & Identity Fundamentals</li>
-      <li>Introduction to Cybersecurity – Cisco</li>
-      <li>Udemy: Infraestrutura, Redes e SysAdmin</li>
+    <ul class="skills">
+      <li>Windows/Linux Server</li>
+      <li>VMware / Hyper-V</li>
+      <li>Redes (Fortinet, Unifi)</li>
+      <li>Backup & Monitoramento</li>
+      <li>Banco de Dados (SQL/PostgreSQL)</li>
+      <li>Programação & Automação (Shell, Python, ADVPL)</li>
+      <li>Segurança da Informação</li>
     </ul>
   </section>
 
-  <section id="experiencia" class="section">
-    <h2>Experiência</h2>
-    <ul>
-      <li><strong>Analista de Infraestrutura de TI</strong> – Gestão de servidores, redes, backup e segurança.</li>
-      <li><strong>ESR Soluções (MEI)</strong> – Projetos e consultorias em infraestrutura e sysadmin.</li>
-    </ul>
-  </section>
-
-  <!-- NOVA SEÇÃO DE SERVIÇOS -->
+  <!-- Serviços -->
   <section id="servicos" class="section">
-    <h2>Serviços - ESR Soluções</h2>
-    <div class="grid">
+    <h2>Serviços</h2>
+    <div class="cards">
       <div class="card">
-        <h3>Análise de Dados</h3>
-        <p>Transformação de dados em insights estratégicos para o negócio.</p>
+        <i class="fas fa-network-wired"></i>
+        <h3>Infraestrutura & Redes</h3>
+        <p>Projetos de rede, servidores e segurança perimetral.</p>
       </div>
       <div class="card">
+        <i class="fas fa-database"></i>
+        <h3>Bancos de Dados</h3>
+        <p>Modelagem, otimização e administração SQL/PostgreSQL.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-code"></i>
         <h3>Sites Personalizados</h3>
-        <p>Criação de sites modernos e responsivos sob medida.</p>
+        <p>Criação de sites modernos, responsivos e sob medida.</p>
       </div>
       <div class="card">
-        <h3>Banco de Dados</h3>
-        <p>Administração, otimização e segurança de bancos SQL e NoSQL.</p>
+        <i class="fas fa-chart-line"></i>
+        <h3>Análise de Dados</h3>
+        <p>Transformação de dados em insights para decisão estratégica.</p>
       </div>
       <div class="card">
-        <h3>SysAdmin</h3>
-        <p>Gestão de servidores, redes e automação de rotinas críticas.</p>
+        <i class="fas fa-user-shield"></i>
+        <h3>SysAdmin & Segurança</h3>
+        <p>Gestão de servidores, usuários e proteção da informação.</p>
       </div>
-    </div>
-    <div class="center">
-      <a href="https://esrsolucoes.com.br" target="_blank" class="btn">Visitar ESR Soluções</a>
     </div>
   </section>
 
-  <section id="contato" class="section contato">
+  <!-- Cases -->
+  <section id="cases" class="section bg-light">
+    <h2>Cases de Sucesso</h2>
+    <div class="cases">
+      <div class="case">
+        <h3>Projeto de Virtualização</h3>
+        <p>Migração de servidores físicos para VMware, reduzindo custos em 40%.</p>
+      </div>
+      <div class="case">
+        <h3>Segurança de Rede</h3>
+        <p>Implantação de firewall Fortinet e política de acesso seguro.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section">
     <h2>Contato</h2>
-    <p>
-      <a href="mailto:seuemail@email.com">📧 E-mail</a> |
-      <a href="https://linkedin.com/in/seulinkedin" target="_blank">💼 LinkedIn</a> |
-      <a href="https://github.com/seugithub" target="_blank">💻 GitHub</a> |
-      <a href="curriculo.pdf" download>📄 Download CV</a>
-    </p>
+    <p>Entre em contato para projetos, consultoria ou parcerias.</p>
+    <a href="mailto:seuemail@email.com" class="btn">Enviar E-mail</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 Emerson Rodrigues - ESR Soluções</p>
+    <p>&copy; 2025 Emerson Rodrigues | ESR Soluções</p>
   </footer>
 
   <script src="script.js"></script>
