@@ -21,23 +21,12 @@ document.querySelectorAll(".section, .card, .case").forEach(el => {
 });
 
 // Dark Mode Toggle
-const toggleBtn = document.getElementById("theme-toggle");
+const toggleBtn = document.getElementById("toggle-dark");
 const body = document.body;
-
-// Carregar preferência
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark");
-  toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-}
 
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark");
-
-  if (body.classList.contains("dark")) {
-    toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    localStorage.setItem("theme", "dark");
-  } else {
-    toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    localStorage.setItem("theme", "light");
-  }
+  toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
 });
+
+// Carregar preferência

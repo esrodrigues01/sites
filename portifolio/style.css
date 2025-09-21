@@ -1,79 +1,60 @@
-/* Variáveis de Tema */
 :root {
-  --bg: #ffffff;
-  --text: #333333;
-  --primary: #14213d;
-  --secondary: #fca311;
-  --light: #f7f7f7;
-  --card: #ffffff;
+  --bg: #f4f4f9;
+  --text: #333;
+  --primary: #0077b6;
+  --secondary: #0096c7;
+  --card-bg: #fff;
 }
 
 body.dark {
-  --bg: #121212;
-  --text: #e5e5e5;
-  --primary: #1f1f1f;
-  --secondary: #fca311;
-  --light: #1e1e1e;
-  --card: #2a2a2a;
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --bg: #1e1e1e;
+  --text: #f1f1f1;
+  --primary: #90e0ef;
+  --secondary: #48cae4;
+  --card-bg: #2a2a2a;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  color: var(--text);
+  margin: 0;
   background: var(--bg);
+  color: var(--text);
   transition: background 0.3s, color 0.3s;
 }
 
-/* Header */
-.header {
-  background: var(--primary);
-  color: #fff;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: #fff;
 }
 
-.logo {
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
   height: 40px;
 }
 
-.navbar {
+nav ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
   list-style: none;
+  gap: 1.5rem;
 }
 
-.nav-links a {
+nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.nav-links a:hover {
-  color: var(--secondary);
-}
-
-/* Botão Toggle */
-.btn-toggle {
+#toggle-dark {
   background: none;
   border: none;
   color: #fff;
@@ -81,118 +62,72 @@ body {
   cursor: pointer;
 }
 
-/* Hero */
-.hero {
-  background: linear-gradient(rgba(20,33,61,0.85), rgba(20,33,61,0.85)), url('img/hero-bg.jpg') no-repeat center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 6rem 2rem;
-  transition: background 0.3s;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--secondary);
-  color: var(--primary);
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #fff;
-  color: var(--primary);
-}
-
-/* Sections */
-.section {
-  padding: 4rem 2rem;
+section {
+  padding: 3rem 2rem;
   text-align: center;
 }
 
-.section h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: var(--primary);
-}
-
-.bg-light {
-  background: var(--light);
-}
-
-/* Skills */
-.skills {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-}
-
-.skills li {
-  background: var(--card);
-  padding: 1rem;
-  border-radius: 10px;
-  font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-/* Cards */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .card {
-  background: var(--card);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, background 0.3s;
-}
-
-.card i {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--secondary);
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-/* Cases */
-.cases {
+.card i {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.social-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
   justify-content: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+  margin: 1rem 0;
 }
 
-.case {
-  background: var(--card);
-  padding: 1.5rem;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: background 0.3s;
+.social-links a {
+  color: var(--primary);
+  transition: color 0.2s;
 }
 
-/* Footer */
-footer {
+.social-links a:hover {
+  color: var(--secondary);
+}
+
+.btn-esr {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
   background: var(--primary);
   color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-esr:hover {
+  background: var(--secondary);
+}
+
+footer {
   text-align: center;
   padding: 1rem;
+  background: var(--primary);
+  color: #fff;
+  margin-top: 2rem;
 }
