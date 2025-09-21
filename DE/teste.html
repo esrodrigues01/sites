@@ -8,6 +8,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const imagens = document.querySelectorAll("img");
+
+    imagens.forEach(img => {
+      img.onerror = () => {
+        console.warn("Imagem não carregada:", img.src);
+        img.style.display = "none"; // Oculta imagens quebradas
+      };
+
+      img.onload = () => {
+        img.style.display = "block"; // Garante que fiquem visíveis
+        img.style.visibility = "visible";
+        img.style.opacity = "1";
+      };
+
+      // Força visibilidade
+      img.style.visibility = "visible";
+      img.style.opacity = "1";
+    });
+  });
+</script>
+
   <header>
     <h1>Para Daniela Menezes de Lara, com Amor</h1>
     <h2>Feliz Dia dos Namorados 💖</h2>
@@ -34,7 +57,7 @@
   <section>
     <h2>Galeria de Memórias</h2>
     <div class="galeria">
-      <img src="img_01.jpg" alt="Foto 1">
+      <img src="/DE/img/img_01.jpg" alt="Foto 1">
       <img src="img_02.jpg" alt="Foto 2">
       <img src="img_03.jpg" alt="Foto 3">
       <img src="img_04.jpg" alt="Foto 4">
