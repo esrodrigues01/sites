@@ -1,3 +1,22 @@
+/* Variáveis de Tema */
+:root {
+  --bg: #ffffff;
+  --text: #333333;
+  --primary: #14213d;
+  --secondary: #fca311;
+  --light: #f7f7f7;
+  --card: #ffffff;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #e5e5e5;
+  --primary: #1f1f1f;
+  --secondary: #fca311;
+  --light: #1e1e1e;
+  --card: #2a2a2a;
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -8,20 +27,19 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 0.3s, color 0.3s;
 }
 
 /* Header */
 .header {
-  background: #14213d;
+  background: var(--primary);
   color: #fff;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,6 +47,13 @@ body {
 
 .logo {
   height: 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-links {
@@ -44,7 +69,16 @@ body {
 }
 
 .nav-links a:hover {
-  color: #fca311;
+  color: var(--secondary);
+}
+
+/* Botão Toggle */
+.btn-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /* Hero */
@@ -53,6 +87,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 6rem 2rem;
+  transition: background 0.3s;
 }
 
 .hero h1 {
@@ -67,8 +102,8 @@ body {
 
 .btn {
   display: inline-block;
-  background: #fca311;
-  color: #14213d;
+  background: var(--secondary);
+  color: var(--primary);
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
   font-weight: bold;
@@ -77,7 +112,7 @@ body {
 
 .btn:hover {
   background: #fff;
-  color: #14213d;
+  color: var(--primary);
 }
 
 /* Sections */
@@ -89,11 +124,11 @@ body {
 .section h2 {
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: #14213d;
+  color: var(--primary);
 }
 
 .bg-light {
-  background: #f7f7f7;
+  background: var(--light);
 }
 
 /* Skills */
@@ -105,10 +140,11 @@ body {
 }
 
 .skills li {
-  background: #e5e5e5;
+  background: var(--card);
   padding: 1rem;
   border-radius: 10px;
   font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 /* Cards */
@@ -119,17 +155,17 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: var(--card);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .card i {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #fca311;
+  color: var(--secondary);
 }
 
 .card:hover {
@@ -145,16 +181,17 @@ body {
 }
 
 .case {
-  background: #fff;
+  background: var(--card);
   padding: 1.5rem;
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: background 0.3s;
 }
 
 /* Footer */
 footer {
-  background: #14213d;
+  background: var(--primary);
   color: #fff;
   text-align: center;
   padding: 1rem;
