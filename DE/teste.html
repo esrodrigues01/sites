@@ -150,12 +150,22 @@ setTimeout(() => {
 
 
 
-    // corações flutuando
-    setInterval(() => {
-      const coracao = document.createElement('div');
-      coracao.className = 'coracao';
-      coracao.style.left = Math.random() * 100 + 'vw';
-      document.body.appendChild(coracao);
-      setTimeout(() => coracao.remove(), 5000);
-    }, 300);
+    // corações subindo
+  //  setInterval(() => {
+  //    const coracao = document.createElement('div');
+   //   coracao.className = 'coracao';
+  //    coracao.style.left = Math.random() * 100 + 'vw';
+   //   document.body.appendChild(coracao);
+   //   setTimeout(() => coracao.remove(), 5000);
+  //  }, 300);
+
+  // corações caindo
+  setInterval(() => {
+    const coracao = document.createElement('div');
+    coracao.className = 'coracao';
+    coracao.style.left = Math.random() * 100 + 'vw';
+    coracao.style.top = '-30px'; // começa fora da tela, no topo
+    document.body.appendChild(coracao);
+    setTimeout(() => coracao.remove(), 5000);
+  }, 300);
   </script>
