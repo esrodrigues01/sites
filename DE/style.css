@@ -166,3 +166,8 @@ footer {
 .carrossel-btn.direita {
   right: 10px;
 }
+
+#inicio-musica {
+  transition: opacity 1s ease;
+}
+
