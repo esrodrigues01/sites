@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="inicio-musica" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#fff0f5; display:flex; align-items:center; justify-content:center; z-index:9999;">
+  <button onclick="iniciarMusica()" style="font-size:1.5rem; padding:1rem 2rem; background:#ff99aa; color:white; border:none; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);">
+    💖 Entrar no site com música
+  </button>
+</div>
   <header>
     <h1>Para Daniela Menezes de Lara, com Amor</h1>
     <h2>Feliz Dia dos Namorados 💖</h2>
@@ -121,14 +126,18 @@
     const diff = Math.floor((hoje - dataInicio) / (1000 * 60 * 60 * 24));
     document.getElementById("contador").textContent = `Estás no meu coração há ${diff} dias. 💕`;
 
-    function toggleMusica() {
-      const musica = document.getElementById("musica");
-      if (musica.paused) {
-        musica.play();
-      } else {
-        musica.pause();
-      }
-    }
+    function iniciarMusica() {
+    const musica = document.getElementById("musica");
+    musica.play();
+    document.getElementById("inicio-musica").style.display = "none";
+}
+
+document.getElementById("inicio-musica").style.opacity = "0";
+setTimeout(() => {
+  document.getElementById("inicio-musica").style.display = "none";
+}, 1000);
+
+
 
     // corações flutuando
     setInterval(() => {
