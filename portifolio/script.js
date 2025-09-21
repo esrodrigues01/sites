@@ -29,4 +29,22 @@ toggleBtn.addEventListener("click", () => {
   toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+
 // Carregar preferência
