@@ -8,47 +8,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const imagens = document.querySelectorAll("img");
-
-    imagens.forEach(img => {
-      img.onerror = () => {
-        console.warn("Imagem não carregada:", img.src);
-        img.style.display = "none"; // Oculta imagens quebradas
-      };
-
-      img.onload = () => {
-        img.style.display = "block"; // Garante que fiquem visíveis
-        img.style.visibility = "visible";
-        img.style.opacity = "1";
-      };
-
-      // Força visibilidade
-      img.style.visibility = "visible";
-      img.style.opacity = "1";
-    });
-  });
-  const carrossel = document.querySelector('.carrossel');
-  const btnEsquerda = document.querySelector('.carrossel-btn.esquerda');
-  const btnDireita = document.querySelector('.carrossel-btn.direita');
-
-  let index = 0;
-
-  btnDireita.addEventListener('click', () => {
-    const total = carrossel.children.length;
-    index = (index + 1) % total;
-    carrossel.style.transform = `translateX(-${index * 100}%)`;
-  });
-
-  btnEsquerda.addEventListener('click', () => {
-    const total = carrossel.children.length;
-    index = (index - 1 + total) % total;
-    carrossel.style.transform = `translateX(-${index * 100}%)`;
-  });
-
-</script>
-
   <header>
     <h1>Para Daniela Menezes de Lara, com Amor</h1>
     <h2>Feliz Dia dos Namorados 💖</h2>
@@ -72,30 +31,29 @@
     </div>
   </section>
 
-<section>
-  <h2>Galeria de Memórias</h2>
-  <div class="carrossel-container">
-    <button class="carrossel-btn esquerda">⟨</button>
-    <div class="carrossel">
-      <img src="/DE/img/img_01.jpg" alt="Foto 1">
-      <img src="/DE/img/img_02.jpg" alt="Foto 2">
-      <img src="/DE/img/img_03.jpg" alt="Foto 3">
-      <img src="/DE/img/img_04.jpg" alt="Foto 4">
-      <img src="/DE/img/img_05.jpg" alt="Foto 5">
-      <img src="/DE/img/img_07.jpg" alt="Foto 6">
-      <img src="/DE/img/img_08.jpg" alt="Foto 7">
-      <img src="/DE/img/img_09.jpg" alt="Foto 8">
-      <img src="/DE/img/img_10.jpg" alt="Foto 9">
-      <img src="/DE/img/img_11.jpg" alt="Foto 10">
-      <img src="/DE/img/img_13.jpg" alt="Foto 11">
-      <img src="/DE/img/img_14.jpg" alt="Foto 12">
-      <img src="/DE/img/img_15.jpg" alt="Foto 13">
-      <img src="/DE/img/img_16.png" alt="Foto 14">
-    </div>
-    <button class="carrossel-btn direita">⟩</button>
-  </div>
-</section>
+  <section>
+    <h2>Galeria de Memórias</h2>
+    <div class="galeria">
+      <img src="img/img_01.jpg" alt="Foto 1">
+      <img src="img/img_02.jpg" alt="Foto 2">
+      <img src="img/img_03.jpg" alt="Foto 3">
+      <img src="img/img_04.jpg" alt="Foto 4">
 
+      <img src="img/img_05.jpg" alt="Foto 1">
+      <img src="img/img_07.jpg" alt="Foto 3">
+      <img src="img/img_08.jpg" alt="Foto 4">
+
+      <img src="img/img_09.jpg" alt="Foto 1">
+      <img src="img/img_10.jpg" alt="Foto 2">
+      <img src="img/img_11.jpg" alt="Foto 3">
+
+      <img src="img/img_13.jpg" alt="Foto 1">
+      <img src="img/img_14.jpg" alt="Foto 2">
+      <img src="img/img_15.jpg" alt="Foto 3">
+      <img src="img/img_16.PNG" alt="Foto 4">
+  
+    </div>
+  </section>
 
   <section>
     <h2>Palavras do Coração</h2>
@@ -115,8 +73,8 @@
     <button onclick="document.getElementById('surpresa').style.display='block'">Clique para ver uma surpresa 💝</button>
     <div id="surpresa" style="display:none; margin-top:1rem;">
       <p>Você é a razão dos meus melhores sorrisos. ❤️</p>
-      <img src="/DE/img/eu_01.jpg" alt="Foto 1">
-      <img src="/DE/img/eu_02.jpg" alt="Foto 1">
+      <img src="img/eu_01.jpg" alt="Foto 1">
+      <img src="img/eu_02.jpg" alt="Foto 1">
     </div>
   </section>
 
