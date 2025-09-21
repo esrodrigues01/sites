@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Daniela, com Amor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Para Daniela Menezes de Lara, com Amor</h1>
+    <h2>Feliz Dia dos Namorados 💖</h2>
+  </header>
+
+  <section>
+    <div class="mensagem">
+      <p>Desde que você entrou na minha vida, tudo aconteceu de um jeito único — só nosso. Tudo ganhou mais cor, mais intensidade, mais verdade. Adoro você por cada detalhe e por tudo o que construímos: com erros, acertos e uma história cheia de sentimento</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Nossa História</h2>
+    <div class="mensagem">
+      <p>Nos conhecemos no sábado, 27/01/2024, e nos encontramos pessoalmente no final de semana seguinte, 03/02/2024. Você, em Nova Olímpia. Eu, em Várzea Grande. Distantes por 202 km, mas conectados por algo muito maior.</p>
+      <p>No nosso primeiro encontro, você apareceu com aquele short rosa e blusa preta, sorridente, linda, sem acreditar que eu realmente viajei tudo aquilo só pra te ver. Almoçamos juntos no Manhattan, em Barra do Bugres — e ali, eu já sabia: você era especial.</p>
+      <p>Vivemos idas e vindas. Em maio nos separamos, voltamos em agosto, ficamos até dezembro, e em maio de 2025, estamos juntos novamente. Cada recomeço nos ensinou mais sobre o valor de estarmos juntos.</p>
+      <p>Fui o primeiro a te dar flores — girassóis 🌻 — e ver o seu sorriso foi um dos momentos mais lindos da minha vida. Você, estressadinha e ao mesmo tempo cheia de amor, sempre cuidando de mim, querendo me ver bem e feliz.</p>
+      <p>Os dois únicos presentes que ganhei na vida de alguém fora da minha família vieram de você: ovos de Páscoa em 2024 e um capacete em junho de 2025. Você me fez sentir amado como ninguém antes. Eu sou muito feliz por ter você na minha vida, Daniela. ❤️</p>
+      <p>Adoro andar de moto com você. As viagens que fizemos juntos são algumas das minhas melhores lembranças. E até hoje, amo quando vamos de Nova Olímpia para Barra do Bugres — parece simples, mas com você, cada quilômetro é especial.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Galeria de Memórias</h2>
+    <div class="galeria">
+      <img src="img/img_01.jpg" alt="Foto 1">
+      <img src="img/img_02.jpg" alt="Foto 2">
+      <img src="img/img_03.jpg" alt="Foto 3">
+      <img src="img/img_04.jpg" alt="Foto 4">
+
+      <img src="img/img_05.jpg" alt="Foto 1">
+      <img src="img/img_07.jpg" alt="Foto 3">
+      <img src="img/img_08.jpg" alt="Foto 4">
+
+      <img src="img/img_09.jpg" alt="Foto 1">
+      <img src="img/img_10.jpg" alt="Foto 2">
+      <img src="img/img_11.jpg" alt="Foto 3">
+
+      <img src="img/img_13.jpg" alt="Foto 1">
+      <img src="img/img_14.jpg" alt="Foto 2">
+      <img src="img/img_15.jpg" alt="Foto 3">
+      <img src="img/img_16.PNG" alt="Foto 4">
+  
+    </div>
+  </section>
+
+  <section>
+    <h2>Palavras do Coração</h2>
+    <div class="cartoes">
+      <div class="cartao">Você é meu lugar favorito.</div>
+      <div class="cartao">Escolheria você mil vezes.</div>
+      <div class="cartao">Teu sorriso é maravilhoso.</div>
+      <div class="cartao">Você é meu melhor presente.</div>
+      <div class="cartao">Meu coração sorri quando pensa em você.</div>
+      <div class="cartao">Contigo, até os dias difíceis valem a pena..</div>
+      <div class="cartao">Obrigado por existir.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Surpresa 💝</h2>
+    <button onclick="document.getElementById('surpresa').style.display='block'">Clique para ver uma surpresa 💝</button>
+    <div id="surpresa" style="display:none; margin-top:1rem;">
+      <p>Você é a razão dos meus melhores sorrisos. ❤️</p>
+      <img src="img/eu_01.jpg" alt="Foto 1">
+      <img src="img/eu_02.jpg" alt="Foto 1">
+    </div>
+  </section>
+
+  <section>
+    <h2>Quantos dias nos conhecemos?</h2>
+    <p id="contador"></p>
+  </section>
+
+  <footer>
+    Feito com amor por mim, para você. 💻❤️ Feliz Dia dos Namorados!
+  </footer>
+
+  <audio id="musica" loop autoplay>
+    <source src="megustastu.mp3" type="audio/mpeg">
+  </audio>
+  <div style="text-align:center; margin: 1rem;">
+    <button onclick="toggleMusica()">🎵 Tocar/Pausar Música</button>
+  </div>
+
+  <div class="coracoes"></div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animado');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('section, .cartao').forEach(el => {
+      el.classList.add('oculto');
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.cartao').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('ativo');
+      });
+    });
+
+    const dataInicio = new Date("2024-01-27");
+    const hoje = new Date();
+    const diff = Math.floor((hoje - dataInicio) / (1000 * 60 * 60 * 24));
+    document.getElementById("contador").textContent = `Estás no meu coração há ${diff} dias. 💕`;
+
+    function toggleMusica() {
+      const musica = document.getElementById("musica");
+      if (musica.paused) {
+        musica.play();
+      } else {
+        musica.pause();
+      }
+    }
+
+    // corações flutuando
+    setInterval(() => {
+      const coracao = document.createElement('div');
+      coracao.className = 'coracao';
+      coracao.style.left = Math.random() * 100 + 'vw';
+      document.body.appendChild(coracao);
+      setTimeout(() => coracao.remove(), 5000);
+    }, 300);
+  </script>
