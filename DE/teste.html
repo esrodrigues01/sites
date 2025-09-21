@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <audio id="musica" loop>
+    <source src="megustastu.mp3" type="audio/mpeg">
+  </audio>
+
   <div id="inicio-musica" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#fff0f5; display:flex; align-items:center; justify-content:center; z-index:9999;">
   <button onclick="iniciarMusica()" style="font-size:1.5rem; padding:1rem 2rem; background:#ff99aa; color:white; border:none; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);">
     💖 Entrar no site com música
@@ -92,12 +96,7 @@
     Feito com amor por mim, para você. 💻❤️ Feliz Dia dos Namorados!
   </footer>
 
-  <audio id="musica" loop autoplay>
-    <source src="megustastu.mp3" type="audio/mpeg">
-  </audio>
-  <div style="text-align:center; margin: 1rem;">
-    <button onclick="toggleMusica()">🎵 Tocar/Pausar Música</button>
-  </div>
+  
 
   <div class="coracoes"></div>
 
@@ -126,11 +125,15 @@
     const diff = Math.floor((hoje - dataInicio) / (1000 * 60 * 60 * 24));
     document.getElementById("contador").textContent = `Estás no meu coração há ${diff} dias. 💕`;
 
-    function iniciarMusica() {
+  function iniciarMusica() {
     const musica = document.getElementById("musica");
-    musica.play();
+    musica.play().then(() => {
     document.getElementById("inicio-musica").style.display = "none";
+    }).catch((error) => {
+      console.warn("Erro ao iniciar a música:", error);
+    });
 }
+
 
 document.getElementById("inicio-musica").style.opacity = "0";
 setTimeout(() => {
