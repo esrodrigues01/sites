@@ -29,6 +29,24 @@
       img.style.opacity = "1";
     });
   });
+  const carrossel = document.querySelector('.carrossel');
+  const btnEsquerda = document.querySelector('.carrossel-btn.esquerda');
+  const btnDireita = document.querySelector('.carrossel-btn.direita');
+
+  let index = 0;
+
+  btnDireita.addEventListener('click', () => {
+    const total = carrossel.children.length;
+    index = (index + 1) % total;
+    carrossel.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  btnEsquerda.addEventListener('click', () => {
+    const total = carrossel.children.length;
+    index = (index - 1 + total) % total;
+    carrossel.style.transform = `translateX(-${index * 100}%)`;
+  });
+
 </script>
 
   <header>
@@ -54,29 +72,30 @@
     </div>
   </section>
 
-  <section>
-    <h2>Galeria de Memórias</h2>
-    <div class="galeria">
+<section>
+  <h2>Galeria de Memórias</h2>
+  <div class="carrossel-container">
+    <button class="carrossel-btn esquerda">⟨</button>
+    <div class="carrossel">
       <img src="/DE/img/img_01.jpg" alt="Foto 1">
       <img src="img_02.jpg" alt="Foto 2">
       <img src="img_03.jpg" alt="Foto 3">
       <img src="img_04.jpg" alt="Foto 4">
-
-      <img src="img_05.jpg" alt="Foto 1">
-      <img src="img_07.jpg" alt="Foto 3">
-      <img src="img_08.jpg" alt="Foto 4">
-
-      <img src="img_09.jpg" alt="Foto 1">
-      <img src="img_10.jpg" alt="Foto 2">
-      <img src="img_11.jpg" alt="Foto 3">
-
-      <img src="img_13.jpg" alt="Foto 1">
-      <img src="img_14.jpg" alt="Foto 2">
-      <img src="img_15.jpg" alt="Foto 3">
-      <img src="img_16.PNG" alt="Foto 4">
-  
+      <img src="img_05.jpg" alt="Foto 5">
+      <img src="img_07.jpg" alt="Foto 6">
+      <img src="img_08.jpg" alt="Foto 7">
+      <img src="img_09.jpg" alt="Foto 8">
+      <img src="img_10.jpg" alt="Foto 9">
+      <img src="img_11.jpg" alt="Foto 10">
+      <img src="img_13.jpg" alt="Foto 11">
+      <img src="img_14.jpg" alt="Foto 12">
+      <img src="img_15.jpg" alt="Foto 13">
+      <img src="img_16.png" alt="Foto 14">
     </div>
-  </section>
+    <button class="carrossel-btn direita">⟩</button>
+  </div>
+</section>
+
 
   <section>
     <h2>Palavras do Coração</h2>
