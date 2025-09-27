@@ -41,3 +41,14 @@ style.textContent = `
 }
 `;
 document.head.appendChild(style);
+
+const texto = "Desde que te conheci, cada dia é mais bonito. Te amo infinitamente!";
+let i = 0;
+function digitar() {
+  if (i < texto.length) {
+    document.getElementById("mensagem").innerHTML += texto.charAt(i);
+    i++;
+    setTimeout(digitar, 100);
+  }
+}
+digitar();
