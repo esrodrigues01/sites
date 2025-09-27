@@ -1,0 +1,40 @@
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Uma surpresa pra você 💖</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="overlay" class="overlay hidden">
+<button id="startBtn" class="btn">Tocar surpresa</button>
+</div>
+
+
+<header class="header">
+<h1 id="title">Uma surpresa pra você</h1>
+<p id="subtitle">Feito com carinho 🌷</p>
+</header>
+
+
+<main class="card">
+<div class="message" id="message">Olá — seja bem-vinda(o)!</div>
+<div class="actions">
+<button id="repeatBtn" class="btn small">Repetir música</button>
+<button id="shareBtn" class="btn small">Compartilhar</button>
+</div>
+</main>
+
+
+<canvas id="heartsCanvas" aria-hidden="true"></canvas>
+
+
+<audio id="themeAudio" loop preload="auto"></audio>
+
+
+<footer class="footer">Presente enviado com amor ❤️</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
