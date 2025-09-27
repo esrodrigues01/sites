@@ -65,3 +65,37 @@ h1 {
   height: 100%;
   pointer-events: none;
 }
+
+
+.pulsante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 40px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  max-width: 600px;
+  font-size: 1.2em;
+  color: #d6336c;
+}
+.timeline li {
+  margin: 10px 0;
+}
+
+
+.carousel-images img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
