@@ -148,10 +148,23 @@ footer {
   transform: translateY(40px);
   transition: all 0.8s ease;
 }
-.animado {
+.visivel {
   opacity: 1;
   transform: translateY(0);
 }
+
+.capitulo {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.capitulo.animado {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 /* Tela inicial música */
 #inicio-musica {
@@ -240,5 +253,63 @@ img {
   display: block; /* evita espaços extras em imagens inline */
 }
 
+
+
+
+.linha-tempo {
+  position: relative;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  border-left: 3px solid var(--lilas-fresco);
+  max-width: 600px;
+}
+
+.marco {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 7rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 1s ease;
+}
+
+.marco::before {
+  content: attr(data-dia);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--rosa-suave);
+  color: #333;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+
+.marco.animado {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Destaque para o marco atual */
+#marco-atual {
+  font-weight: bold;
+  color: var(--vermelho-tulipa);
+}
+#marco-atual::before {
+  content: attr(data-dia); /* ← aqui está o segredo */
+  background: var(--dourado-suave);
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  white-space: nowrap;
+
+}
 
 

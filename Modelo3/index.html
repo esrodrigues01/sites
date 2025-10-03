@@ -27,7 +27,9 @@
   <section class="capitulo">
     <h2>Capítulo I — Onde tudo começou</h2>
     <p>Aqui você pode contar como foi o primeiro encontro, o início da amizade ou do amor.</p>
-    <img class="galeria" src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=80" alt="primeiroEncontro">
+    <div class="galeria">
+         <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=80" alt="primeiroEncontro">
+    </div>
   </section>
 
   <!-- Capítulo II -->
@@ -64,10 +66,25 @@
 
 
   <!-- Capítulo V -->
-  <section class="capitulo">
-    <h2>Capítulo V — Nossa linha do tempo</h2>
-    <p id="contador"></p>
-  </section>
+
+<section class="capitulo">
+  <h2>Capítulo Especial — Nossa História em Dias</h2>
+  <p id="contador"></p> <!-- contador dinâmico já existente -->
+  
+  <div class="linha-tempo">
+    <div class="marco" data-dia="1">- O dia em que nos conhecemos</div>
+    <div class="marco" data-dia="30">- Nosso primeiro mês</div>
+    <div class="marco" data-dia="100">- Cem dias de memórias</div>
+    <div class="marco" data-dia="365">- Um ano florescendo juntos</div>
+    <div class="marco" id="marco-atual" data-dia="">
+        Hoje: <span id="dias-atual"></span> dias de história 🌹
+    </div>
+
+
+  </div>
+</section>
+
+
 
   <!-- Encerramento -->
   <footer>
