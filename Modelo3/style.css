@@ -98,7 +98,7 @@ section {
 
 .cartao {
   background: var(--amarelo-primavera);
-  color: #333;
+  color: #222;
   padding: 1rem 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -106,7 +106,7 @@ section {
   transition: transform 0.3s;
   opacity: 1 !important;
   transform: none !important;
-
+  flex: 1 1 200px;
 }
 
 .cartao:hover {
@@ -145,10 +145,14 @@ section {
 
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background: var(--lilas-fresco);
   color: white;
 }
+footer p {
+  margin: 0.5rem 0;
+}
+
 
 .oculto {
   opacity: 0;
@@ -434,3 +438,58 @@ img {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
+.bloco-redes {
+  text-align: center;
+  margin-top: 3rem;
+  margin: 1rem 0;
+  padding: 2rem;
+  background: var(--lilas-fresco);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.bloco-redes p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-redes {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--lilas-fresco);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-redes i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.btn-redes:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Acessibilidade: foco visível */
+.btn-redes:focus, .btn-share:focus, .btn-surpresa:focus {
+  outline: 3px solid var(--dourado-suave);
+  outline-offset: 3px;
+}
+
+/* Respeitar prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+

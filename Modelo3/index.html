@@ -3,10 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cartão de Memórias</title>
+  <title>Flores e Memórias - Um cartão que floresce com você</title>
+  <meta name="description" content="Um cartão digital romântico que acompanha suas flores, com música, imagens e lembranças.">
+  <link rel="shortcut icon" href="https://github.com/esrodrigues01/sites/blob/main/Modelo3/logo1.png?raw=true" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <meta property="og:title" content="Flores Memórias 🌸">
+  <meta property="og:description" content="Um cartão digital romântico que floresce com você.">
+  <meta property="og:image" content="https://seudominio.com/imagens/miniatura.jpg">
+  <meta property="og:type" content="website">
 </head>
+
 <body>
 
   <!-- Música de fundo -->
@@ -28,7 +36,7 @@
     <h2>Capítulo I — Onde tudo começou</h2>
     <p>Aqui você pode contar como foi o primeiro encontro, o início da amizade ou do amor.</p>
     <div class="galeria">
-         <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=80" alt="primeiroEncontro">
+         <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=80" alt="primeiroEncontro"> <!-- Ajustar Alt para a descrição breve da imagemI -->
     </div>
   </section>
 
@@ -96,13 +104,28 @@
 
 
   <!-- Encerramento -->
-  <footer>
-    <p id="frase-final">Porque lembranças merecem florescer para sempre...</p>
-    <p>Este cartão foi criado especialmente para você, [Nome], com todo o carinho. 🌸</p>
-    <p>Se essa história tocou seu coração... 🌸</p>
-  <button class="btn-share" onclick="compartilhar()">📤 Compartilhar nas redes</button>
+<footer>
+  <!--<p id="frase-final">Porque lembranças merecem florescer para sempre...</p>-->
+  <h2 id="frase-final">Siga-nos nas Redes Sociais e Compartilhe sua História</h2>
+  <div class="bloco-redes">
+    <a href="https://instagram.com/flores.memorias" target="_blank" class="btn-redes">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://facebook.com/floresmemorias" target="_blank" class="btn-redes">
+      <i class="fab fa-facebook"></i> Facebook
+    </a>
+    <a href="https://wa.me/5599999999999" target="_blank" class="btn-redes">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="https://floresmemorias.com.br" target="_blank" class="btn-redes">
+      <i class="fas fa-globe"></i> Site
+    </a>
+    <button class="btn-share" onclick="compartilhar()">📤 Compartilhar sua Página</button>
+  </div>
 
-  </footer>
+  <p class="assinatura">Criado com carinho para você, [Nome].</p>
+</footer>
+
 
   <!-- Elementos flutuantes -->
   <div class="hearts" aria-hidden="true"></div>
