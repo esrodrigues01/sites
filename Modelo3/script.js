@@ -180,3 +180,20 @@ function mostrarSurpresa() {
     surpresa.style.opacity = 1;
   }, 50);
 }
+
+
+//Compartilhar 
+function compartilhar() {
+  if (navigator.share) {
+    navigator.share({
+      title: "Flores Memórias 🌸",
+      text: "Uma lembrança especial que me emocionou!",
+      url: window.location.href
+    })
+    .then(() => console.log("Compartilhado com sucesso!"))
+    .catch((error) => console.log("Erro ao compartilhar:", error));
+  } else {
+    alert("O compartilhamento direto não é suportado neste navegador.");
+  }
+}
+
