@@ -9,6 +9,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -57,7 +59,7 @@ section {
 }
 .galeria img {
   width: 100%;          /* ocupa toda a largura da tela */
-  height: 100vh;         /* mantém proporção */
+  height: auto;         /* mantém proporção */
   max-width: 100vw;     /* nunca ultrapassa a tela */
   border-radius: 10px;
   border: 3px solid var(--dourado-suave);
@@ -230,5 +232,13 @@ footer {
   user-select: none;
   will-change: transform, opacity;
 }
+
+/* Todas as imagens do site nunca ultrapassam a tela */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* evita espaços extras em imagens inline */
+}
+
 
 
