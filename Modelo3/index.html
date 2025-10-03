@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartão de Memórias</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Música de fundo -->
+  <audio id="musica" loop>
+    <source src="megustastu.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Tela inicial -->
+  <div id="inicio-musica">
+    <div class="mensagem-inicial">
+      <h2>🌸 Bem-vinda, [Nome da Pessoa] 🌸</h2>
+      <p>Hoje cada flor que você recebeu se transforma em palavras, imagens e lembranças.</p>
+      <button onclick="iniciarMusica()">Entrar na história</button>
+    </div>
+  </div>
+
+  <!-- Capítulo I -->
+  <section class="capitulo">
+    <h2>Capítulo I — Onde tudo começou</h2>
+    <p>Aqui você pode contar como foi o primeiro encontro, o início da amizade ou do amor.</p>
+    <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=80" alt="primeiroEncontro">
+  </section>
+
+  <!-- Capítulo II -->
+  <section class="capitulo">
+    <h2>Capítulo II — Momentos que florescem</h2>
+    <div class="cartoes">
+      <div class="cartao">Um sorriso que mudou meu dia.</div>
+      <div class="cartao">Cada detalhe guardado no coração.</div>
+      <div class="cartao">Flores que eternizam sentimentos.</div>
+    </div>
+  </section>
+
+  <!-- Capítulo III -->
+  section class="capitulo">
+  <h2>Capítulo III — Imagens que falam por si</h2>
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=600&q=80" alt="Memória 1">
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" alt="Memória 2">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Memória 3">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80" alt="Memória 4">
+  </div>
+</section>
+
+
+  <!-- Capítulo IV — A Surpresa -->
+<section class="capitulo">
+  <h2>Capítulo IV — Uma lembrança oculta 🌹</h2>
+  <button onclick="mostrarSurpresa()">Revelar lembrança</button>
+  <div id="surpresa">
+    <p>Flores Memórias é mais do que flores, é emoção em forma de lembrança.</p>
+    <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=600&q=80" alt="Surpresa especial">
+  </div>
+</section>
+
+
+  <!-- Capítulo V -->
+  <section class="capitulo">
+    <h2>Capítulo V — Nossa linha do tempo</h2>
+    <p id="contador"></p>
+  </section>
+
+  <!-- Encerramento -->
+  <footer>
+    <p id="frase-final">Porque lembranças merecem florescer para sempre...</p>
+    <p>Este cartão foi criado especialmente para você, [Nome], com todo o carinho. 🌸</p>
+  </footer>
+
+  <!-- Elementos flutuantes -->
+  <div class="hearts" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

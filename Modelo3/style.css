@@ -1,0 +1,208 @@
+:root {
+  --verde-folha: #2EBB57;
+  --lilas-fresco: #B399D4;
+  --dourado-suave: #C9A646;
+  --rosa-suave: #FFB6C1;
+  --amarelo-primavera: #F9E076;
+  --vermelho-tulipa: #FF4D4D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #faf9f7;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  background: var(--lilas-fresco);
+  color: white;
+  padding: 2rem 1rem;
+  font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 10px #fff, 0 0 20px var(--dourado-suave);
+}
+
+section {
+  padding: 2rem;
+}
+
+.mensagem {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 6px solid var(--rosa-suave);
+}
+
+/* Hover nas imagens da galeria */
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover na imagem da surpresa */
+#surpresa img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+
+.cartoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cartao {
+  background: var(--amarelo-primavera);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.cartao:hover {
+  transform: scale(1.05);
+}
+.cartao.ativo {
+  background: var(--vermelho-tulipa);
+  color: white;
+  transform: scale(1.1) rotate(-1deg);
+}
+
+#surpresa {
+  display: none;
+  margin-top: 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#surpresa.mostrar {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#surpresa img {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--lilas-fresco);
+  color: white;
+}
+
+.oculto {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.animado {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tela inicial música */
+#inicio-musica {
+ position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.75); /* fundo escuro translúcido */
+  transition: opacity 1s ease;
+}
+#inicio-musica .mensagem-inicial {
+  background: rgba(255, 255, 255, 0.9); /* caixa clara semi-transparente */
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+#inicio-musica h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--lilas-fresco);
+}
+
+#inicio-musica p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+#inicio-musica button {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  background: var(--vermelho-tulipa);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#inicio-musica button:hover {
+  background: #cc0000;
+}
+
+/* Container para os corações */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* não atrapalha cliques */
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Animação de queda */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Estilo base dos corações */
+.hearts div {
+  position: absolute;
+  animation: fall 5s linear forwards;
+  user-select: none;
+  will-change: transform, opacity;
+}
+
+
