@@ -312,4 +312,100 @@ img {
 
 }
 
+.linha-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 2rem 1rem;
+}
+
+.linha-horizontal::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--lilas-fresco);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.marco-h {
+  position: relative;
+  background: var(--rosa-suave);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.marco-h::before {
+  content: attr(data-dia);
+  display: block;
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.marco-h.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Capitulo IV*/
+
+.btn-surpresa {
+  background: linear-gradient(135deg, var(--rosa-suave), var(--lilas-fresco));
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-surpresa:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.btn-surpresa::after {
+  content: "🌹";
+  position: absolute;
+  right: -20px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.btn-surpresa:hover::after {
+  right: 10px;
+  opacity: 1;
+}
+
+#surpresa {
+  display: none;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+#surpresa img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
 

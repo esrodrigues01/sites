@@ -135,3 +135,48 @@ function mostrarSurpresa() {
 
 
 
+function animarLinhaDoTempo() {
+  const marcos = document.querySelectorAll('.marco-h');
+  marcos.forEach((marco, i) => {
+    setTimeout(() => {
+      marco.classList.add('visivel');
+    }, i * 1000); // cada marco aparece 1s depois do anterior
+  });
+
+  // Atualiza o marco de hoje com a data atual
+  const marcoHoje = document.getElementById("marco-hoje");
+  if (marcoHoje) {
+    const hoje = new Date().toLocaleDateString("pt-BR", {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    });
+    marcoHoje.setAttribute("data-dia", hoje);
+  }
+}
+// Executa ao carregar
+animarLinhaDoTempo();
+
+
+function atualizarLinhaHorizontal() {
+ atualizarLinhaHorizontal(); // ← calcula as datas antes de animar
+ const marcos = document.querySelectorAll('.marco-h');
+ marcos.forEach((marco, i) => {
+   setTimeout(() => {
+     marco.classList.add('visivel');
+   }, i * 1000);
+ });
+
+}
+
+//Capitulo IV
+function mostrarSurpresa() {
+  const surpresa = document.getElementById("surpresa");
+  surpresa.style.display = "block";
+  surpresa.style.opacity = 0;
+
+  setTimeout(() => {
+    surpresa.style.transition = "opacity 1s ease";
+    surpresa.style.opacity = 1;
+  }, 50);
+}

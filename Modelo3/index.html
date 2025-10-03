@@ -57,7 +57,7 @@
   <!-- Capítulo IV — A Surpresa -->
 <section class="capitulo">
   <h2>Capítulo IV — Uma lembrança oculta 🌹</h2>
-  <button onclick="mostrarSurpresa()">Revelar lembrança</button>
+  <button class="btn-surpresa" onclick="mostrarSurpresa()">✨ Revelar lembrança</button>
   <div id="surpresa">
     <p>Flores Memórias é mais do que flores, é emoção em forma de lembrança.</p>
     <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=600&q=80" alt="Surpresa especial">
@@ -65,25 +65,33 @@
 </section>
 
 
+
   <!-- Capítulo V -->
+  <!-- Linhas verticais -->
+  <!--   <section class="capitulo">
+   <h2>Capítulo Especial — Nossa História em Dias</h2>
+    <p id="contador"></p> <!-- contador dinâmico já existente 
+    <div class="linha-tempo">
+        <div class="marco" data-dia="1">- O dia em que nos conhecemos</div>
+        <div class="marco" data-dia="30">- Nosso primeiro mês</div>
+        <div class="marco" data-dia="100">- Cem dias de memórias</div>
+        <div class="marco" data-dia="365">- Um ano florescendo juntos</div>
+        <div class="marco" id="marco-atual" data-dia="">
+            Hoje: <span id="dias-atual"></span> dias de história 🌹
+        </div>
+    </div>
+    </section>-->
 
 <section class="capitulo">
   <h2>Capítulo Especial — Nossa História em Dias</h2>
-  <p id="contador"></p> <!-- contador dinâmico já existente -->
-  
-  <div class="linha-tempo">
-    <div class="marco" data-dia="1">- O dia em que nos conhecemos</div>
-    <div class="marco" data-dia="30">- Nosso primeiro mês</div>
-    <div class="marco" data-dia="100">- Cem dias de memórias</div>
-    <div class="marco" data-dia="365">- Um ano florescendo juntos</div>
-    <div class="marco" id="marco-atual" data-dia="">
-        Hoje: <span id="dias-atual"></span> dias de história 🌹
-    </div>
-
-
+  <div class="linha-horizontal">
+    <div class="marco-h" data-dia="27/01/2024">💕 Nos conhecemos</div>
+    <div class="marco-h" data-dia="26/02/2024">🎉 1º mês</div>
+    <div class="marco-h" data-dia="05/05/2024">📸 100 dias</div>
+    <div class="marco-h" data-dia="27/01/2025">🌸 1 ano</div>
+    <div class="marco-h" id="marco-hoje" data-dia="">🌹 Hoje</div>
   </div>
 </section>
-
 
 
   <!-- Encerramento -->
