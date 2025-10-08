@@ -1,0 +1,265 @@
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #111; /* fundo escuro */
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== Tipografia ===== */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #e6b7c7; /* rosa queimado */
+}
+
+p, blockquote {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1rem auto;
+  color: #f2d6dc;
+}
+
+/* ===== Botões ===== */
+.btn {
+  background: transparent;
+  border: 2px solid #e6b7c7;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #e6b7c7;
+  color: #111;
+}
+
+.btn-share {
+  margin-top: 1rem;
+}
+
+/* ===== Tela inicial ===== */
+#inicio-musica {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.mensagem-inicial {
+  text-align: center;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.mensagem-inicial h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Capítulos ===== */
+.capitulo {
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.capitulo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.capitulo p {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+}
+
+/* ===== Galeria ===== */
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.galeria img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Grid */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* ===== Cartões ===== */
+.cartoes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.cartao {
+  background: #222;
+  border: 1px solid #333;
+  padding: 1.2rem;
+  border-radius: 10px;
+  max-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.cartao:hover {
+  border-color: #e6b7c7;
+  transform: translateY(-5px);
+}
+
+/* ===== Surpresa ===== */
+#surpresa {
+  display: none;
+  margin-top: 1.5rem;
+}
+
+#surpresa img {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* ===== Linha do tempo ===== */
+.linha-tempo {
+  position: relative;
+  border-left: 2px solid #e6b7c7;
+  margin: 2rem auto;
+  padding-left: 2rem;
+  max-width: 600px;
+  text-align: left;
+}
+
+.marco {
+  position: relative;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.marco::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0.4em;
+  width: 12px;
+  height: 12px;
+  background: #e6b7c7;
+  border-radius: 50%;
+  border: 2px solid #111;
+}
+
+.marco.destaque {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #f2d6dc;
+}
+
+.marco.destaque::before {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e6b7c7;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+}
+
+.frase-final {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  color: #f2d6dc;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.redes .siga-nos {
+  font-size: 0.95rem;
+  color: #fff;
+  margin-right: 0.5rem;
+  font-style: italic;
+}
+
+.redes a {
+  color: #fff;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.redes a:hover {
+  color: #e6b7c7;
+}
+
+.assinatura {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 1rem;
+}
+
+/* ===== Efeitos flutuantes ===== */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* ===== Animações ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes subir {
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}

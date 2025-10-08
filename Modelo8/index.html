@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores & Memórias 🌸</title>
+  <meta name="description" content="Um cartão digital romântico que floresce com você.">
+  <link rel="shortcut icon" href="logo.png" type="image/png">
+
+  <!-- Fontes românticas -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <div id="inicio-musica">
+    <div class="mensagem-inicial">
+      <h1>🌹 Flores & Memórias 🌹</h1>
+      <p>Um presente digital que transforma sentimentos em eternidade.</p>
+      <button class="btn" onclick="iniciarMusica()">Entrar na história</button>
+    </div>
+  </div>
+
+  <!-- Capítulo I -->
+  <section class="capitulo fade-in">
+    <h2>O Primeiro Olhar Que Parou o Tempo</h2>
+    <p>Aquele instante em que tudo começou, sem aviso, sem explicação.</p>
+    <blockquote>“Foi no silêncio do olhar que o coração escolheu.”</blockquote>
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=800&q=80" alt="Primeiro olhar romântico" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Capítulo II -->
+  <section class="capitulo fade-in">
+    <h2>Palavras Que Tocaram a Alma</h2>
+    <p>Mensagens, conversas e gestos que criaram intimidade.</p>
+    <blockquote>“Cada frase sua parecia escrita no meu coração.”</blockquote>
+    <div class="cartoes">
+      <div class="cartao">💌 Mensagens que viraram memórias.</div>
+      <div class="cartao">🌸 Emojis que se tornaram sentimentos.</div>
+      <div class="cartao">🌹 Conversas que floresceram em amor.</div>
+    </div>
+  </section>
+
+  <!-- Capítulo III -->
+  <section class="capitulo fade-in">
+    <h2>Abraços Que Curam</h2>
+    <p>O conforto de estar junto, mesmo nos dias difíceis.</p>
+    <blockquote>“Nos seus braços, o mundo sempre pareceu mais leve.”</blockquote>
+    <div class="galeria grid-2">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Abraço 1" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Abraço 2" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Capítulo IV -->
+  <section class="capitulo fade-in">
+    <h2>Momentos Que Viraram Eternidade</h2>
+    <p>Pequenas lembranças que se tornaram gigantes.</p>
+    <blockquote>“Um café, uma caminhada, uma gargalhada — tudo virou poesia.”</blockquote>
+    <button class="btn" onclick="mostrarSurpresa()">✨ Revelar</button>
+    <div id="surpresa">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Momento especial" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Capítulo V -->
+  <section class="capitulo fade-in">
+    <h2>Promessas Que Florescem</h2>
+    <p>Planos, sonhos e tudo que ainda está por vir.</p>
+    <blockquote>“Prometemos continuar regando o que já floresceu.”</blockquote>
+  </section>
+
+  <!-- Capítulo VI -->
+  <section class="capitulo fade-in">
+    <h2>Hoje: Amor Que Cresce Com o Tempo</h2>
+    <p>O presente como celebração do que foi e do que será.</p>
+    <blockquote>“Cada dia contigo é mais um capítulo que merece ser eternizado.”</blockquote>
+    <p id="contador"></p>
+    <div class="linha-tempo">
+      <div class="marco" data-dia="1">💕 O primeiro olhar</div>
+      <div class="marco" data-dia="30">💌 Nosso primeiro mês</div>
+      <div class="marco" data-dia="100">🌸 Cem dias de amor</div>
+      <div class="marco" data-dia="365">🌹 Um ano de histórias</div>
+      <div class="marco destaque" id="marco-atual" data-dia="">
+        Hoje: <span id="dias-atual"></span> dias de amor
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="frase-final">Porque lembranças merecem florescer para sempre... 🌸</p>
+    <button class="btn" onclick="compartilhar()">📤 Compartilhar Este Presente</button>
+    <div class="redes">
+      <span class="siga-nos">Siga-nos:</span>
+      <a href="https://instagram.com/flores.memorias" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/floresmemorias" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/5599999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://floresmemorias.com.br" target="_blank"><i class="fas fa-globe"></i></a>
+    </div>
+    <p class="assinatura">Criado com carinho para você, [Nome].</p>
+  </footer>
+
+  <!-- Efeitos flutuantes -->
+  <div class="hearts" aria-hidden="true"></div>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="megustastu.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
