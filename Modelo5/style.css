@@ -1,0 +1,197 @@
+:root {
+  --rosa: #FFB6C1;
+  --lilas: #C8A2C8;
+  --dourado: #C9A646;
+  --vermelho: #FF4D6D;
+  --fundo: #fff8fa;
+  --texto: #4a2c2a;
+}
+
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+/* Títulos românticos */
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  color: var(--vermelho);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Seções */
+section {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Tela inicial */
+#inicio-musica {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 182, 193, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.mensagem-inicial {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.mensagem-inicial h1 { margin-bottom: 0.75rem; }
+.mensagem-inicial p { margin-bottom: 1.25rem; }
+
+/* Galeria */
+.galeria {
+  display: grid;
+  gap: 1rem;
+}
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.galeria img {
+  border-radius: 15px;
+  border: 3px solid var(--dourado);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Cartões */
+.cartoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cartao {
+  flex: 1 1 200px;
+  background: var(--rosa);
+  padding: 1rem;
+  border-radius: 15px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  transition: transform 0.3s, background 0.3s;
+}
+.cartao:hover {
+  transform: scale(1.05);
+  background: var(--lilas);
+  color: #fff;
+}
+.cartao.ativo {
+  background: var(--vermelho);
+  color: #fff;
+}
+
+/* Botões */
+.btn {
+  background: linear-gradient(135deg, var(--rosa), var(--lilas));
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* Surpresa */
+#surpresa {
+  display: none;
+  margin-top: 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+#surpresa.mostrar {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Linha do tempo */
+.linha-tempo {
+  position: relative;
+  margin: 2rem auto;
+  padding: 1rem 0.5rem 1rem 1rem;
+  border-left: 3px dashed var(--lilas);
+  max-width: 620px;
+}
+.marco {
+  position: relative;
+  margin: 1.5rem 0;
+  padding-left: 7rem;
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.marco::before {
+  content: attr(data-dia);
+  position: absolute;
+  left: 0; top: 0;
+  background: var(--rosa);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+.marco.animado { opacity: 1; transform: translateX(0); }
+#marco-atual { font-weight: 600; color: var(--vermelho); }
+#marco-atual::before {
+  background: var(--vermelho);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--lilas);
+  color: white;
+}
+footer .redes a {
+  margin: 0 0.5rem;
+  color: white;
+  font-size: 1.6rem;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+footer .redes a:hover { color: var(--dourado); transform: translateY(-2px); }
+footer .assinatura { margin-top: 0.75rem; color: #fff; font-family: 'Dancing Script', cursive; }
+
+/* Efeitos flutuantes */
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+.hearts div {
+  position: absolute;
+  animation: fall 6s linear forwards;
+}
+@keyframes fall {
+  0%   { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Animações ao rolar */
+.oculto { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.animado { opacity: 1; transform: translateY(0); }
