@@ -127,16 +127,27 @@ function compartilhar() {
     url: window.location.href
   };
 
+  // Se o navegador suporta o compartilhamento nativo
   if (navigator.share) {
-    navigator.share(shareData).catch(() => {});
-  } else {
-    // Fallback simples
-    const temp = document.createElement('input');
-    temp.value = shareData.url;
-    document.body.appendChild(temp);
-    temp.select();
-    document.execCommand('copy');
-    document.body.removeChild(temp);
-    alert('Link copiado! Você pode colar onde quiser 💜');
+    navigator.share(shareData)
+      .catch(() => {
+        // Usuário pode cancelar, não precisa tratar erro
+      });
+  } 
+  // Caso contrário, usa a API moderna de clipboard
+  else if (navigator.clipboard) {
+    navigator.clipboard.writeText(shareData.url)
+      .then(() => {
+        alert('Link copiado! Você pode colar onde quiser 💜');
+      })
+      .catch(() => {
+        alert('Não foi possível copiar o link automaticamente.');
+      });
+  } 
+  // Último recurso: fallback antigo
+  else {
+    alert('Copie este link: ' + shareData.url);
   }
 }
+
+
