@@ -80,8 +80,29 @@ section.bloco {
   margin: 2rem 0;
   font-style: italic;
   color: var(--preto);
-
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
 }
+
+.marco .data {
+  font-size: 0.9rem;
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+
+.marco .detalhe {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+#marco-atual {
+  font-weight: bold;
+  color: var(--dourado);
+}
+
 
 .marco::before {
   content: "";
