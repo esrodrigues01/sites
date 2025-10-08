@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores & Memórias</title>
+  <meta name="description" content="Um cartão digital moderno que floresce com você.">
+  <link rel="shortcut icon" href="logo.png" type="image/png">
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <div id="inicio-musica" aria-modal="true" role="dialog">
+    <div class="mensagem-inicial">
+      <h1>Flores & Memórias</h1>
+      <p>Um presente digital que transforma momentos em eternidade.</p>
+      <button class="btn" onclick="iniciarMusica()">Começar</button>
+    </div>
+  </div>
+
+  <!-- Capítulo I -->
+  <section class="capitulo">
+    <h2>O Match Inesperado</h2>
+    <p>Tudo começou com uma conexão improvável que virou destino.</p>
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=800&q=80"
+           alt="Primeiro encontro moderno" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Capítulo II -->
+  <section class="capitulo">
+    <h2>Primeiro Story Juntos</h2>
+    <div class="cartoes">
+      <div class="cartao" tabindex="0">A primeira foto que eternizou um instante.</div>
+      <div class="cartao" tabindex="0">Um registro simples que virou memória.</div>
+      <div class="cartao" tabindex="0">O início de uma linha do tempo única.</div>
+    </div>
+  </section>
+
+  <!-- Capítulo III -->
+  <section class="capitulo">
+    <h2>Playlist da Nossa História</h2>
+    <p>Cada música virou memória, cada batida marcou um capítulo.</p>
+    <div class="galeria grid-2">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Música 1" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Música 2" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Música 3" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=800&q=80" alt="Música 4" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Capítulo IV -->
+  <section class="capitulo">
+    <h2>Viagem Inesquecível</h2>
+    <button class="btn" onclick="mostrarSurpresa()">✨ Revelar</button>
+    <div id="surpresa" aria-live="polite">
+      <p>Novos lugares, novas risadas, e a sensação de que o mundo era pequeno demais para tanto sentimento.</p>
+      <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=800&q=80" alt="Viagem especial" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Linha do tempo -->
+ <section class="capitulo">
+  <h2>365 Dias de Nós</h2>
+  <p id="contador"></p>
+
+  <div class="linha-tempo" aria-label="Linha do tempo de marcos">
+    <div class="marco" data-dia="1">
+      <i class="fas fa-heart"></i> O Match
+    </div>
+    <div class="marco" data-dia="30">
+      <i class="fas fa-heart"></i> Primeiro mês juntos
+    </div>
+    <div class="marco" data-dia="100">
+      <i class="fas fa-heart"></i> Cem dias de memórias
+    </div>
+    <div class="marco" data-dia="365">
+      <i class="fas fa-heart"></i> Um ano de histórias
+    </div>
+    <div class="marco destaque" id="marco-atual" data-dia="">
+      <i class="fas fa-heart fa-lg"></i> Hoje: <span id="dias-atual"></span> dias de história
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p class="frase-final">Porque a verdadeira elegância é tornar o efêmero eterno.</p>
+
+    <button class="btn-share" onclick="compartilhar()">📤 Compartilhar Este Presente</button>
+
+    <div class="redes" aria-label="Redes sociais">
+      <span class="siga-nos">Siga-nos:</span>
+      <a href="https://instagram.com/flores.memorias" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/floresmemorias" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/5599999999999" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://floresmemorias.com.br" target="_blank" aria-label="Site oficial"><i class="fas fa-globe"></i></a>
+    </div>
+
+    <p class="assinatura">Criado com carinho para você, [Nome].</p>
+  </footer>
+
+  <!-- Efeitos flutuantes -->
+  <div class="hearts" aria-hidden="true"></div>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="megustastu.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
