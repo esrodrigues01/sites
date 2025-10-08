@@ -57,10 +57,13 @@ section.bloco {
   background: var(--preto);
   color: var(--branco);
   border: none;
-  padding: 0.8rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
+
+  font-size: 1.1rem;   /* aumenta o texto */
+  font-weight: 500;    /* dá mais presença */
+  padding: 0.9rem 1.6rem; 
 }
 .btn:hover {
   background: var(--dourado);
