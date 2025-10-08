@@ -1,0 +1,209 @@
+:root {
+  --primaria: #6C63FF;       /* lilás moderno */
+  --secundaria: #FF6584;     /* rosa vibrante */
+  --texto: #222;             /* texto escuro */
+  --fundo: #f9f9f9;          /* fundo claro */
+  --cinza: #eaeaea;          /* bordas suaves */
+  --preto: #111;             /* footer escuro */
+}
+
+/* Reset básico e acessibilidade */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2 {
+  font-weight: 600;
+  color: var(--primaria);
+  margin: 0 0 1rem 0;
+}
+
+section {
+  padding: 3rem 1.5rem;
+  max-width: 980px;
+  margin: auto;
+}
+
+/* Tela inicial */
+#inicio-musica {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.mensagem-inicial {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+}
+.mensagem-inicial h1 { margin-bottom: 0.75rem; }
+.mensagem-inicial p { margin-bottom: 1.25rem; color: #444; }
+
+/* Galeria moderna */
+.galeria {
+  display: grid;
+  gap: 1rem;
+}
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.galeria img {
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid var(--cinza);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.galeria img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Cartões */
+.cartoes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.cartao {
+  flex: 1 1 240px;
+  background: #fff;
+  border: 1px solid var(--cinza);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.2s ease;
+}
+.cartao:hover, .cartao:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  outline: none;
+}
+.cartao.ativo {
+  background: #f4f1ff;
+  border-color: #d9d3ff;
+}
+
+/* Botões */
+.btn {
+  background: var(--primaria);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+.btn:hover { background: var(--secundaria); }
+.btn:active { transform: scale(0.98); }
+.btn:focus {
+  outline: 3px solid var(--secundaria);
+  outline-offset: 3px;
+}
+
+/* Surpresa */
+#surpresa {
+  display: none;
+  margin-top: 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+#surpresa.mostrar {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Linha do tempo vertical */
+.linha-tempo {
+  position: relative;
+  margin: 2rem auto;
+  padding: 1rem 0.5rem 1rem 1rem;
+  border-left: 3px solid var(--primaria);
+  max-width: 620px;
+}
+.marco {
+  position: relative;
+  margin: 1.5rem 0;
+  padding-left: 7rem;
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.marco::before {
+  content: attr(data-dia);
+  position: absolute;
+  left: 0; top: 0;
+  background: #fff;
+  color: #555;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border: 1px solid var(--cinza);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  white-space: nowrap;
+}
+.marco.animado { opacity: 1; transform: translateX(0); }
+#marco-atual { font-weight: 600; color: var(--primaria); }
+#marco-atual::before {
+  background: var(--primaria);
+  color: #fff;
+  border: none;
+}
+
+/* Footer moderno */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--preto);
+  color: #fff;
+}
+footer .redes a {
+  margin: 0 0.45rem;
+  color: #fff;
+  font-size: 1.6rem;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+footer .redes a:hover { color: var(--secundaria); transform: translateY(-2px); }
+footer .assinatura { margin-top: 0.75rem; color: #ccc; }
+
+/* Efeitos flutuantes */
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+.hearts div {
+  position: absolute;
+  animation: fall 5.5s linear forwards;
+  will-change: transform, opacity;
+}
+@keyframes fall {
+  0%   { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Animações ao rolar */
+.oculto { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.animado { opacity: 1; transform: translateY(0); }
+
+/* Reduzir movimento para acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

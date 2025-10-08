@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores & Memórias</title>
+  <meta name="description" content="Um cartão digital moderno que floresce com você.">
+  <link rel="shortcut icon" href="logo.png" type="image/png">
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela inicial (consentimento de música) -->
+  <div id="inicio-musica" aria-modal="true" role="dialog">
+    <div class="mensagem-inicial">
+      <h1>Flores & Memórias</h1>
+      <p>Um presente que vai além das flores: uma experiência digital única.</p>
+      <button class="btn" onclick="iniciarMusica()">Começar</button>
+    </div>
+  </div>
+
+  <!-- Capítulo I -->
+  <section class="capitulo">
+    <h2>Onde tudo começou</h2>
+    <p>Conte aqui como foi o primeiro encontro, o início da amizade ou do amor.</p>
+    <div class="galeria">
+      <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=800&q=80"
+           alt="Foto do primeiro encontro com balões coloridos" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Capítulo II -->
+  <section class="capitulo">
+    <h2>Momentos que florescem</h2>
+    <div class="cartoes">
+      <div class="cartao" tabindex="0">Um sorriso que mudou meu dia.</div>
+      <div class="cartao" tabindex="0">Cada detalhe guardado no coração.</div>
+      <div class="cartao" tabindex="0">Flores que eternizam sentimentos.</div>
+    </div>
+  </section>
+
+  <!-- Capítulo III -->
+  <section class="capitulo">
+    <h2>Imagens que falam por si</h2>
+    <div class="galeria grid-2">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Memória 1" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Memória 2" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Memória 3" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=800&q=80" alt="Memória 4" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Capítulo IV -->
+  <section class="capitulo">
+    <h2>Uma lembrança oculta</h2>
+    <button class="btn" onclick="mostrarSurpresa()">✨ Revelar</button>
+    <div id="surpresa" aria-live="polite">
+      <p>Flores Memórias é mais do que flores, é emoção em forma de lembrança.</p>
+      <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=800&q=80" alt="Surpresa especial" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Linha do tempo -->
+  <section class="capitulo">
+    <h2>Nossa história em dias</h2>
+    <p id="contador"></p>
+    <div class="linha-tempo" aria-label="Linha do tempo de marcos">
+      <div class="marco" data-dia="1">O dia em que nos conhecemos</div>
+      <div class="marco" data-dia="30">Nosso primeiro mês</div>
+      <div class="marco" data-dia="100">Cem dias de memórias</div>
+      <div class="marco" data-dia="365">Um ano florescendo juntos</div>
+      <div class="marco" id="marco-atual" data-dia="">
+        Hoje: <span id="dias-atual"></span> dias de história
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="redes" aria-label="Redes sociais">
+      <a href="https://instagram.com/flores.memorias" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/floresmemorias" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/5599999999999" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://floresmemorias.com.br" target="_blank" aria-label="Site oficial"><i class="fas fa-globe"></i></a>
+    </div>
+    <button class="btn" onclick="compartilhar()">📤 Compartilhar</button>
+    <p class="assinatura">Criado com carinho para você, [Nome].</p>
+  </footer>
+
+  <!-- Efeitos flutuantes -->
+  <div class="hearts" aria-hidden="true"></div>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="megustastu.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
