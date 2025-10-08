@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores & Memórias — Elegante</title>
+  <meta name="description" content="Um cartão digital elegante que floresce com você.">
+  <link rel="shortcut icon" href="logo.png" type="image/png">
+
+  <!-- Tipografia elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="megustastu.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Tela inicial -->
+  <div id="inicio-musica">
+    <div class="mensagem-inicial">
+      <h1>Flores & Memórias</h1>
+      <p>Alguns momentos merecem ser eternizados com elegância.</p>
+      <button class="btn" onclick="iniciarMusica()">Entrar</button>
+    </div>
+  </div>
+
+  <!-- Mensagem central -->
+  <section class="bloco abertura">
+    <h2>“A beleza está nos detalhes que guardamos para sempre.”</h2>
+    <p>Este espaço é dedicado a você, [Nome], para que cada lembrança floresça em sofisticação.</p>
+  </section>
+
+  <!-- Imagem de impacto -->
+  <section class="bloco destaque">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1200&q=80" alt="Imagem elegante de flores">
+  </section>
+
+  <!-- Galeria minimalista -->
+  <section class="bloco galeria">
+    <h2>Memórias em imagens</h2>
+    <div class="grid">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Memória 1">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Memória 2">
+      <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=800&q=80" alt="Memória 3">
+    </div>
+  </section>
+
+  <!-- Contador de dias -->
+  <section class="bloco contador">
+    <h2>Nossa história em dias</h2>
+    <p id="contador"></p>
+    <div class="linha-tempo">
+      <div class="marco" data-dia="1">O primeiro olhar</div>
+      <div class="marco" data-dia="30">Nosso primeiro mês</div>
+      <div class="marco" data-dia="100">Cem dias de memórias</div>
+      <div class="marco" data-dia="365">Um ano juntos</div>
+      <div class="marco" id="marco-atual" data-dia="">
+        Hoje: <span id="dias-atual"></span> dias de história
+      </div>
+    </div>
+  </section>
+
+  <!-- Encerramento -->
+  <footer>
+    <p class="frase-final">Porque a verdadeira elegância é tornar o efêmero eterno.</p>
+    <div class="redes">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fas fa-globe"></i></a>
+    </div>
+    <button class="btn" onclick="compartilhar()">📤 Compartilhar</button>
+  </footer>
+
+  <div class="hearts" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
